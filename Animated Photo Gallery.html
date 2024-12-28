@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Photo Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+            color: #fff;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            width: 300px;
+            height: 200px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1s ease-in-out;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.2);
+        }
+
+        .details {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            transition: bottom 0.5s ease-in-out;
+        }
+
+        .gallery-item:hover .details {
+            bottom: 0;
+        }
+
+        .details h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .details p {
+            font-size: 1em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Photo Gallery</h1>
+    </header>
+
+    <!-- Top Gallery -->
+    <section class="gallery-container">
+        <div class="gallery-item">
+            <img src="111.jpg" alt="">
+            <div class="details">
+                <h2>Beautiful Landscape</h2>
+                <p>A breathtaking view of nature.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="AdobeStock_1109961031_Preview.jpeg" alt="">
+            <div class="details">
+                <h2>Urban Vibes</h2>
+                <p>The essence of city life.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="HD-wallpaper-tranquil-beach-scenic-sunset-beach-sunset-relaxing-beach-peaceful-beach.jpg" alt="">
+            <div class="details">
+                <h2>Peaceful Beach</h2>
+                <p>Relaxing by the ocean.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="12771.jpg" alt="">
+            <div class="details">
+                <h2>Starry Night</h2>
+                <p>The beauty of the cosmos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Space Between -->
+    <div style="height: 50px;"></div>
+
+    <!-- Bottom Gallery -->
+    <section class="gallery-container">
+        <div class="gallery-item">
+            <img src="ghost.jpg" alt="">
+            <div class="details">
+                <h2>Ghost Warrior </h2>
+                <p>Simon "Ghost" Riley from Call of Duty is seen wearing his iconic gas mask and tactical gear in a dark.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="Cyberpunk.jpeg" alt="">
+            <div class="details">
+                <h2> Cyberpunk Cityscape"</h2>
+                <p>A cyberpunk cityscape bathed in neon pink and purple hues with a glowing retro sun..</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="robotics.jpeg" alt="">
+            <div class="details">
+                <h2></h2>
+                <p>futuristic robot stands vigilant in a neon-lit urban cityscape..</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="just-cause4.webp" alt="">
+            <div class="details">
+                <h2>Stormy Adventure Awaits</h2>
+                <p>A lone hero stands amidst a stormy jungle, ready for action.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <!-- <p>&copy; 2024 Photo Gallery. All rights reserved.</p> -->
+    </footer>
+</body>
+</html>
